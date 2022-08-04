@@ -1,0 +1,119 @@
+Objetos:
+
+Interfaz I_Tropa -> generarMovimiento, getVidaRestante, getEstaVivo  -Listo
+abstract Class MovimientoTropa_Abstract - Patron Comportamiento
+abstract Class CualidadesTropa
+
+
+Infanteria:
+	estaVivo = true/false
+	puedeAtacar = true/false
+	puedeMoverse = true/false
+	estaEncasillaValido = true/false
+	ObjetoPrefa = Va a tener la forma del prefa
+	casillaDer = direccion del casilla hacia la derecha
+	casillaIzq = direccion del casilla hacia la izquierda
+	casillaArr = direccion del casilla hacia arriba
+	casilla Aba = direccion del casilla hacia abajo
+	RangoMovimiento = 1 a 6
+	VidaTotal = 5
+	VidaRestante = ?
+	Ataque = 3
+	Defensa = 5
+	AtaqueEspecial = Ataque + 3
+
+
+Artilleros:
+	estaVivo = true/false
+	puedeAtacar = true/false
+	puedeMoverse = true/false
+	estaEncasillaValido = true/false
+	ObjetoPrefa = Va a tener la forma del prefa
+	casillaDer = direccion del casilla hacia la derecha
+	casillaIzq = direccion del casilla hacia la izquierda
+	casillaArr = direccion del casilla hacia arriba
+	casillaAba = direccion del casilla hacia abajo
+	RangoMovimiento = 1 a 4
+	VidaTotal = 4
+	VidaRestante = ?
+	Ataque = 6
+	Defensa = 10
+	AtaqueEspecial = Ataque a dos casilla de distancia
+
+
+Tanque:
+	estaVivo = true/false
+	puedeAtacar = true/false
+	puedeMoverse = true/false
+	estaEncasillaValido = true/false
+	ObjetoPrefa = Va a tener la forma del prefa
+	casillaDer = direccion del casilla hacia la derecha
+	casillaIzq = direccion del casilla hacia la izquierda
+	casillaArr = direccion del casilla hacia arriba
+	casilla Aba = direccion del casilla hacia abajo
+	RangoMovimiento = 1 a 2
+	VidaTotal = 2
+	VidaRestante = ?
+	Ataque = 10
+	Defensa = 10
+	AtaqueEspecial = Proteccion a un aliado (Defensa +5 para aliado)
+	
+	Base
+	ataquesSoportados = 3
+	ataquesRestantes = ?
+	destruida = true/false
+	
+Casilla:
+	Disponible: true/false
+	jugador1 = true/false
+	jugador2 = true/false
+	
+
+
+Interfaz I_DadoPrimario -> elegirCara
+
+Dado
+	Invocacion (Primer y Segundo Dado)
+		Tres caras Infanteria
+		Dos caras Artilleros
+		Una Cara Tanque
+		
+	Acciones
+		Dos caras Movimiento
+		Dos caras Ataque
+		Dos caras ataque especial
+		
+	Normal
+		1,2,3,4,5,6,
+
+Cofre de Dados (Arraylists)
+	Cantidad de dados de infanteria, artilleros y tanque -> 6
+	Movimiento -> 3
+	Ataque -> 3
+	Ataque Especial -> 2
+
+
+
+
+Creacionales
+Fabrica Abstracta: Personajes
+Prototipo: casilla
+
+Estructurales
+Decorador: Personajes
+Proxy: Stacks Jugador
+
+Comportamiento
+Cadena de Responsabilidad: PowerUp - PowerDown - Gemas
+Visitante: Remover - Powerup - PowerDown - Gemas
+
+
+En java generar la estructura, lo que se necesiata para validaciones, para poder hacer la funciones de 
+generar las estructuruas
+Y cuando se traducen hacia Javascript, se hace una traduccion hacia los objetos, se le envian los atributos
+y luego se construyen en javascript
+Se puede generar una tabla y luego se llena con los datos que se necesita
+
+Para hacer las validaciones de las Ls, se haria en el backend con Java, para que java haga todas las
+validaciones 
+https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
